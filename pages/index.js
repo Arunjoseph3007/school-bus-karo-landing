@@ -2,11 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
-//! import Attendance from '../public/assets/Attendance.jpg'
-//! ../../public/assets/abc.png is equivalent to /assets/abc.png
-//! when referencing files in public folder, just use a forward slash
-import Attendance from '/assets/Attendance.jpg'
-import Onboarding from '/assets/Onboarding.jpg'
 
 //& Website Homepage Function
 /// This is the Main Landing Page of the Website
@@ -53,10 +48,10 @@ export default function Home({ props }) {
         {/* //$ Mockup Photo */}
         <div className="w-1/3 h-screen [background:linear-gradient(#38B2AC,transparent)] relative">
           <div className="absolute overflow-hidden hero-image right-10 top-10">
-            <Image src={Attendance} alt="attendance" />
+            <Image src={'/assets/Attendance.jpg'} alt="attendance" layout="fill" />
           </div>
           <div className="absolute overflow-hidden hero-image right-[300px] top-[87px]">
-            <Image src={Onboarding} alt="attendance" />
+            <Image src={'/assets/Onboarding.jpg'} layout="fill" alt="attendance" />
           </div>
         </div>
       </main>
